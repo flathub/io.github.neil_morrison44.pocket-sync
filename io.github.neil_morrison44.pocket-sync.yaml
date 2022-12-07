@@ -30,6 +30,8 @@ modules:
       - type: git
         url: https://github.com/neil-morrison44/pocket-sync
         tag: v1.4.1
+        x-checker-data:
+          type: git
       # Generated with .../flatpak-builder-tools/node/flatpak-node-generator.py npm package-lock.json
       - 'node-sources.json'
       # Generated with .../flatpak-builder-tools/cargo/flatpak-cargo-generator.py src-tauri/Cargo.lock
