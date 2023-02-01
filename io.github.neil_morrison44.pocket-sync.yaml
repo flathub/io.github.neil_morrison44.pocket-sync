@@ -39,6 +39,8 @@ modules:
       - node-sources.json
       # Generated with .../flatpak-builder-tools/cargo/flatpak-cargo-generator.py src-tauri/Cargo.lock
       - cargo-sources.json
+      - type: patch
+        path: 0001-Disable-Tauri-auto-updater.patch
       - type: file
         path: io.github.neil_morrison44.pocket-sync.appdata.xml
       - type: file
