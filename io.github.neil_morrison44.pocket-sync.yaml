@@ -29,16 +29,18 @@ modules:
     sources:
       - type: git
         url: https://github.com/neil-morrison44/pocket-sync
-        tag: v2.3.0
+        tag: v2.4.0
         x-checker-data:
           type: git
       # Generated with:
       # npm i --package-lock-only
       # .../flatpak-builder-tools/node/flatpak-node-generator.py npm package-lock.json
-        commit: e1a407ecf1d8ba695dfcce8f28fea0ee4129a583
+        commit: 203d2d4f9a890d99ab39c64b3afdd393621ad496
       - node-sources.json
       # Generated with .../flatpak-builder-tools/cargo/flatpak-cargo-generator.py src-tauri/Cargo.lock
       - cargo-sources.json
+      - type: patch
+        path: 0001-Disable-Tauri-auto-updater.patch
       - type: file
         path: io.github.neil_morrison44.pocket-sync.appdata.xml
       - type: file

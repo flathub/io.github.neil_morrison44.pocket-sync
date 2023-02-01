@@ -2030,6 +2030,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/minisign-verify/minisign-verify-0.2.1.crate",
+        "sha256": "933dca44d65cdd53b355d0b73d380a2ff5da71f87f036053188bf1eab6a19881",
+        "dest": "cargo/vendor/minisign-verify-0.2.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"933dca44d65cdd53b355d0b73d380a2ff5da71f87f036053188bf1eab6a19881\", \"files\": {}}",
+        "dest": "cargo/vendor/minisign-verify-0.2.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/miniz_oxide/miniz_oxide-0.6.2.crate",
         "sha256": "b275950c28b37e794e8c55d88aeb5e139d0ce23fdbbeda68f8d7174abdf9e8fa",
         "dest": "cargo/vendor/miniz_oxide-0.6.2"
