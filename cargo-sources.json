@@ -2,8 +2,8 @@
     {
         "type": "git",
         "url": "https://github.com/neil-morrison44/openfpga-instance-packager",
-        "commit": "7c69ee69c2d5cc447afbedb645c1cf114bad939d",
-        "dest": "flatpak-cargo/git/openfpga-instance-packager-7c69ee6"
+        "commit": "721a8925081bbffb18272fd5ec6a87e4a1b1dcdf",
+        "dest": "flatpak-cargo/git/openfpga-instance-packager-721a892"
     },
     {
         "type": "archive",
@@ -2439,7 +2439,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/openfpga-instance-packager-7c69ee6/.\" \"cargo/vendor/openfpga-instance-packager\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/openfpga-instance-packager-721a892/.\" \"cargo/vendor/openfpga-instance-packager\""
         ]
     },
     {
@@ -5297,7 +5297,7 @@
     },
     {
         "type": "inline",
-        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/neil-morrison44/openfpga-instance-packager\"]\ngit = \"https://github.com/neil-morrison44/openfpga-instance-packager\"\nreplace-with = \"vendored-sources\"\ntag = \"v0.2.1\"\n",
+        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/neil-morrison44/openfpga-instance-packager\"]\ngit = \"https://github.com/neil-morrison44/openfpga-instance-packager\"\nreplace-with = \"vendored-sources\"\ntag = \"v0.3.1\"\n",
         "dest": "cargo",
         "dest-filename": "config"
     }
