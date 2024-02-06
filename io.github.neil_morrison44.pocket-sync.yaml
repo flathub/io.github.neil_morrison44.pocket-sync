@@ -41,6 +41,8 @@ modules:
       - cargo-sources.json
       - type: patch
         path: 0001-Disable-Tauri-auto-updater.patch
+      - type: patch
+        path: 0001-Get-tauri-plugin-log-as-an-archive-instead-of-using-.patch
       - type: file
         path: io.github.neil_morrison44.pocket-sync.appdata.xml
       - type: file
