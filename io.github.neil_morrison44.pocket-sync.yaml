@@ -29,13 +29,13 @@ modules:
     sources:
       - type: git
         url: https://github.com/neil-morrison44/pocket-sync
-        tag: v4.9.0
+        tag: v4.9.1
         x-checker-data:
           type: git
       # Generated with:
       # npm i --package-lock-only
       # .../flatpak-builder-tools/node/flatpak-node-generator.py npm package-lock.json
-        commit: bc86f730f9af3ffbf9d4cf55266172ea81731750
+        commit: 623b16b1c0c36f0a788a9f4dd3fa045c61ef2ad1
       - node-sources.json
       # Generated with .../flatpak-builder-tools/cargo/flatpak-cargo-generator.py src-tauri/Cargo.lock
       - cargo-sources.json
