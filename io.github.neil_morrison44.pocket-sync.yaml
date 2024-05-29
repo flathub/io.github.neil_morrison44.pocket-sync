@@ -5,7 +5,7 @@ runtime-version: '42'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node16
-  - org.freedesktop.Sdk.Extension.rust-nightly
+  - org.freedesktop.Sdk.Extension.rust-stable
 command: pocket-sync
 rename-icon: pocket-sync
 separate-locales: false
@@ -21,7 +21,7 @@ modules:
   - name: pocket-sync
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/node16/bin:/usr/lib/sdk/rust-nightly/bin
+      append-path: /usr/lib/sdk/node16/bin:/usr/lib/sdk/rust-stable/bin
       env:
         npm_config_nodedir: /usr/lib/sdk/node16
         npm_config_offline: 'true'
