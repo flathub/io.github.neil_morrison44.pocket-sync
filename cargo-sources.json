@@ -5120,7 +5120,7 @@
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"tauri-plugin-log\"\nversion = \"0.0.0\"\ndescription = \"Configurable logging for your Tauri app.\"\nauthors = [ \"Tauri Programme within The Commons Conservancy\",]\nlicense = \"Apache-2.0 OR MIT\"\nedition = \"2021\"\nrust-version = \"1.64\"\n\n[dependencies]\nserde_json = \"1\"\ntauri = \"1\"\nserde_repr = \"0.1\"\nbyte-unit = \"5\"\nfern = \"0.6\"\nlog = \"0.4\"\n\n[features]\ncolored = [ \"fern/colored\",]\n\n[dependencies.serde]\nversion = \"1\"\nfeatures = [ \"derive\",]\n\n[dependencies.time]\nversion = \"0.3\"\nfeatures = [ \"formatting\", \"local-offset\",]\n",
+        "contents": "[package]\nname = \"tauri-plugin-log\"\nversion = \"0.0.0\"\ndescription = \"Configurable logging for your Tauri app.\"\nauthors = [ \"Tauri Programme within The Commons Conservancy\",]\nlicense = \"Apache-2.0 OR MIT\"\nedition = \"2021\"\nrust-version = \"1.64\"\n\n[dependencies]\nserde_json = \"1\"\ntauri = \"1\"\nserde_repr = \"0.1\"\nbyte-unit = \"5\"\nfern = \"0.6\"\n\n[features]\ncolored = [ \"fern/colored\",]\n\n[dependencies.serde]\nversion = \"1\"\nfeatures = [ \"derive\",]\n\n[dependencies.log]\nfeatures = [ \"kv_unstable\",]\nversion = \"0.4\"\n\n[dependencies.time]\nversion = \"0.3\"\nfeatures = [ \"formatting\", \"local-offset\",]\n",
         "dest": "cargo/vendor/tauri-plugin-log",
         "dest-filename": "Cargo.toml"
     },
