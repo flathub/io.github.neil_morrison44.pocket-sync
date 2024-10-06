@@ -1,0 +1,65 @@
+name: Regenerate Flatpak Sources
+
+on:
+  pull_request:
+
+jobs:
+  regenerate-sources:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Flathub repo
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 1
+
+    - name: Checkout flatpak-builder-tools repo
+      uses: actions/checkout@v4
+      with:
+        repository: flatpak/flatpak-builder-tools
+        path: flatpak-builder-tools
+        fetch-depth: 1
+
+    - name: Checkout Pocket Sync repo
+      uses: actions/checkout@v4
+      with:
+        repository: neil-morrison44/pocket-sync
+        path: pocket-sync
+        fetch-depth: 1
+
+    - name: Install Python and dependencies
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install pip dependencies (node)
+      run: |
+        cd flatpak-builder-tools/node
+        pipx install .
+
+    - name: Install pip dependencies (cargo)
+      run: |
+        cd flatpak-builder-tools/cargo
+        pip install toml aiohttp
+
+    - name: Get package-lock.json & src-tauri/cargo.lock from main pocket-sync repo
+      run: |
+        cp pocket-sync/package-lock.json .
+        cp pocket-sync/src-tauri/Cargo.lock .
+
+    - name: Run flatpak-node-generator
+      run: |
+        flatpak-node-generator npm package-lock.json -o node-sources.json
+
+    - name: Run cargo-generator
+      run: |
+        python3 flatpak-builder-tools/cargo/flatpak-cargo-generator.py src-tauri/Cargo.toml -o cargo-sources.json
+
+    - name: Commit regenerated sources
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add node-sources.json
+        git add cargo-sources.json
+        git commit -m "Regenerate sources from lock files"
+        git push origin ${{ github.head_ref }}

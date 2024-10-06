@@ -1,10 +1,9 @@
 app-id: io.github.neil_morrison44.pocket-sync
 runtime: org.gnome.Platform
-# Stuck with GNOME 42 until tauri supports newer webkitgtk
-runtime-version: '42'
+runtime-version: '47'
 sdk: org.gnome.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node16
+  - org.freedesktop.Sdk.Extension.node20
   - org.freedesktop.Sdk.Extension.rust-stable
 command: pocket-sync
 rename-icon: pocket-sync
@@ -21,15 +20,15 @@ modules:
   - name: pocket-sync
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/node16/bin:/usr/lib/sdk/rust-stable/bin
+      append-path: /usr/lib/sdk/node20/bin:/usr/lib/sdk/rust-stable/bin
       env:
-        npm_config_nodedir: /usr/lib/sdk/node16
+        npm_config_nodedir: /usr/lib/sdk/node20
         npm_config_offline: 'true'
         CARGO_HOME: /run/build/pocket-sync/cargo
     sources:
       - type: git
         url: https://github.com/neil-morrison44/pocket-sync
-        tag: v4.12.1
+        tag: v5.0.0
         x-checker-data:
           type: git
       # Generated with:
