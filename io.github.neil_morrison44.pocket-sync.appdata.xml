@@ -2,7 +2,7 @@
 <component type="desktop-application">
   <id>io.github.neil_morrison44.pocket-sync</id>
 
-  <name>pocket-sync</name>
+  <name>Pocket Sync</name>
   <summary>A GUI to do stuff with the Analogue Pocket</summary>
   <developer_name>Neil Morrison</developer_name>
 
@@ -20,7 +20,7 @@
 
   <description>
     <p>
-      pocket-sync is a GUI to do stuff with the Analogue Pocket, including installing openFPGA cores, and managing game files.
+      Pocket Sync is a GUI to do stuff with the Analogue Pocket, including installing openFPGA cores, and managing game files.
     </p>
   </description>
 
@@ -34,6 +34,15 @@
     </screenshot>
     <screenshot>
       <image>https://github.com/flathub/io.github.neil_morrison44.pocket-sync/raw/master/screenshots/screenshot-3.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://github.com/flathub/io.github.neil_morrison44.pocket-sync/raw/master/screenshots/screenshot-4.png</image>
+    </screenshot>
+        <screenshot>
+      <image>https://github.com/flathub/io.github.neil_morrison44.pocket-sync/raw/master/screenshots/screenshot-5.png</image>
+    </screenshot>
+        <screenshot>
+      <image>https://github.com/flathub/io.github.neil_morrison44.pocket-sync/raw/master/screenshots/screenshot-6.png</image>
     </screenshot>
   </screenshots>
 

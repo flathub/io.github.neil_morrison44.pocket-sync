@@ -1,32 +1,20 @@
-From e1d9e4233c9ce21a380d70d14bf2ddefb398ee62 Mon Sep 17 00:00:00 2001
-From: Bastien Nocera <hadess@hadess.net>
-Date: Wed, 1 Feb 2023 22:01:55 +0100
-Subject: [PATCH] Disable Tauri auto-updater
-
-It wouldn't be able to update itself anyway, as the binary can't
-overwrite itself.
----
- src-tauri/tauri.conf.json | 7 +------
- 1 file changed, 1 insertion(+), 6 deletions(-)
-
 diff --git a/src-tauri/tauri.conf.json b/src-tauri/tauri.conf.json
-index fe3c071..40fe791 100644
+index 82550ce..8ac1217 100644
 --- a/src-tauri/tauri.conf.json
 +++ b/src-tauri/tauri.conf.json
-@@ -68,12 +68,7 @@
-       "csp": null
-     },
-     "updater": {
--      "active": true,
--      "dialog": true,
+@@ -43,14 +43,7 @@
+   },
+   "productName": "Pocket Sync",
+   "identifier": "today.neil.pocket-sync",
+-  "plugins": {
+-    "updater": {
 -      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEVEQzEwQTA4MUMwQTk0OEEKUldTS2xBb2NDQXJCN1VXbjJHZVZhTkpvcDJTTHcxRXFRd3F4S2dMcS9yc1NJZ2xxbFMvZFJWUS8K",
 -      "endpoints": [
 -        "https://github.com/neil-morrison44/pocket-sync/releases/latest/download/latest.json"
 -      ]
-+      "active": false
-     },
+-    }
+-  },
++  "plugins": {},
+   "app": {
      "windows": [
        {
--- 
-2.39.1
-
