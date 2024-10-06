@@ -14,9 +14,18 @@ jobs:
         fetch-depth: 1
 
     - name: Checkout flatpak-builder-tools repo
-      run: |
-        git clone https://github.com/flatpak/flatpak-builder-tools.git
-        cd flatpak-builder-tools && git checkout master
+      uses: actions/checkout@v4
+      with:
+        repository: flatpak/flatpak-builder-tools
+        path: flatpak-builder-tools
+        fetch-depth: 1
+
+    - name: Checkout Pocket Sync repo
+      uses: actions/checkout@v4
+      with:
+        repository: neil-morrison44/pocket-sync
+        path: pocket-sync
+        fetch-depth: 1
 
     - name: Install Python and dependencies
       uses: actions/setup-python@v4
@@ -35,7 +44,6 @@ jobs:
 
     - name: Get package-lock.json & src-tauri/cargo.lock from main pocket-sync repo
       run: |
-        git clone https://github.com/neil-morrison44/pocket-sync.git pocket-sync
         cp pocket-sync/package-lock.json .
         cp pocket-sync/src-tauri/cargo.lock .
 
