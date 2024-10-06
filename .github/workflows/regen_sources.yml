@@ -49,7 +49,7 @@ jobs:
 
     - name: Run flatpak-node-generator
       run: |
-        flatpak-node-generator package-lock.json -o node-sources.json
+        flatpak-node-generator npm package-lock.json -o node-sources.json
 
     - name: Run cargo-generator
       run: |
