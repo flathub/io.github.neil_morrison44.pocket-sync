@@ -45,7 +45,7 @@ jobs:
     - name: Get package-lock.json & src-tauri/cargo.lock from main pocket-sync repo
       run: |
         cp pocket-sync/package-lock.json .
-        cp pocket-sync/src-tauri/cargo.lock .
+        cp pocket-sync/src-tauri/Cargo.lock .
 
     - name: Run flatpak-node-generator
       run: |
