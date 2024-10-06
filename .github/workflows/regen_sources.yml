@@ -2,7 +2,6 @@ name: Regenerate Flatpak Sources
 
 on:
   pull_request:
-  push:
 
 jobs:
   regenerate-sources:
@@ -32,7 +31,7 @@ jobs:
     - name: Install pip dependencies (cargo)
       run: |
         cd flatpak-builder-tools/cargo
-        pipx install .
+        pip install toml aiohttp
 
     - name: Get package-lock.json & src-tauri/cargo.lock from main pocket-sync repo
       run: |
