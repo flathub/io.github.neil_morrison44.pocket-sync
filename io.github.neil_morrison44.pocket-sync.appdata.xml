@@ -2,7 +2,7 @@
 <component type="desktop-application">
   <id>io.github.neil_morrison44.pocket-sync</id>
 
-  <name>pocket-sync</name>
+  <name>Pocket Sync</name>
   <summary>A GUI to do stuff with the Analogue Pocket</summary>
   <developer_name>Neil Morrison</developer_name>
 
