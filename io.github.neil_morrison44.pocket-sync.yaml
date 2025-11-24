@@ -1,6 +1,6 @@
 app-id: io.github.neil_morrison44.pocket-sync
 runtime: org.gnome.Platform
-runtime-version: '46'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node20
