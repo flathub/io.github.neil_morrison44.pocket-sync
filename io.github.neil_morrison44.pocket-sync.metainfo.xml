@@ -10,6 +10,7 @@
   <project_license>AGPL-3.0-only</project_license>
 
   <url type="homepage">https://github.com/neil-morrison44/pocket-sync</url>
+  <url type="vcs-browser">https://github.com/neil-morrison44/pocket-sync</url>
   <url type="bugtracker">https://github.com/neil-morrison44/pocket-sync/issues</url>
 
   <supports>
