@@ -40,7 +40,7 @@ jobs:
     - name: Install pip dependencies (cargo)
       run: |
         cd flatpak-builder-tools/cargo
-        pip install toml aiohttp
+        pip install tomlkit aiohttp
 
     - name: Get package-lock.json & src-tauri/cargo.lock from main pocket-sync repo
       run: |
