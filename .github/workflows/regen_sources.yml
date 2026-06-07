@@ -42,10 +42,10 @@ jobs:
         cd flatpak-builder-tools/cargo
         pip install tomlkit aiohttp
 
-    - name: Get package-lock.json & src-tauri/cargo.lock from main pocket-sync repo
+    - name: Get package-lock.json & src-tauri/Cargo.toml from main pocket-sync repo
       run: |
         cp pocket-sync/package-lock.json .
-        cp pocket-sync/src-tauri/Cargo.lock .
+        cp pocket-sync/src-tauri/Cargo.toml .
 
     - name: Run flatpak-node-generator
       run: |
