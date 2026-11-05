@@ -42,8 +42,12 @@
   </screenshots>
 
   <releases>
-      <release version="7.1.1" date="2026-10-19">
+      <release version="7.2.0" date="2026-11-05">
+         <url type="details">https://github.com/neil-morrison44/pocket-sync/releases/tag/v7.2.0</url>
          <description></description>
+      </release>
+      <release version="7.1.1" date="2026-10-19">
+         <description/>
       </release>
       <release version="7.0.3" date="2026-10-18">
          <description/>
