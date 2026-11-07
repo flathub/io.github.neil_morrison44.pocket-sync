@@ -28,10 +28,10 @@ modules:
     sources:
       - type: git
         url: https://github.com/neil-morrison44/pocket-sync
-        tag: v7.2.0
+        tag: v7.2.1
         x-checker-data:
           type: git
-        commit: d433e7578712835bc22c8987b1ef7652a6b5c400
+        commit: bd6859494ca46e3c6a41050413d4d77c6fc78340
       # Generated with:
       # npm i --package-lock-only --legacy-peer-deps
       # .../flatpak-builder-tools/node/flatpak-node-generator.py npm package-lock.json
